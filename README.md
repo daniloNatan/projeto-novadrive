@@ -12,6 +12,9 @@ O pipeline foi construído utilizando a **Modern Data Stack (MDS)**, focando em 
 * **Data Warehouse:** Snowflake (Camadas estruturadas de *Stage* e *Analytics*).
 * **Transformação:** dbt (Data Build Tool) para modelagem dimensional, governança e qualidade.
 
+![airflow](imgs/Screenshot_2026-03-30_21-18-20.png)
+![dbt](imgs/Screenshot_2026-03-30_23-08-13.png)
+
 ---
 
 ## 🛠️ Destaques Técnicos
