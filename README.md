@@ -5,7 +5,8 @@ Este projeto simula uma operação real de engenharia de dados para a **NovaDriv
 ---
 
 ## 🏗️ Arquitetura do Ecossistema
-O pipeline foi construído utilizando a **Modern Data Stack (MDS)**, focando em uma estratégia de **ELT** (Extract, Load, Transform) para otimizar o processamento em nuvem.
+O pipeline foi construído utilizando a **Data Stack Morderna**, focando em uma estratégia de **ELT** (Extract, Load, Transform) para otimizar o processamento em nuvem onde implementei uma modelagem Star Schema com tabelas Fato e Dimensão.
+Na fato utilizei o Grão Grosso por conta das atualizações serem diárias com uma configuração incremental facilitando a alimentação da fato com somente os dados novos. 
 
 * **Fonte de Dados:** PostgreSQL (Banco transacional operando em tempo real).
 * **Orquestração:** Apache Airflow rodando em containers Docker dentro de uma instância **AWS EC2 (m7i-flex.large)**.
