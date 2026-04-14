@@ -14,3 +14,4 @@ venv/
 # Docker/Sistemas
 .DS_Store
 *.db
+dbt_internal_packages/
