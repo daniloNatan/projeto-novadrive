@@ -15,7 +15,7 @@ Na fato utilizei o Grão Grosso por conta das atualizações serem diárias com 
 
 ![airflow](imgs/Screenshot_2026-03-30_21-18-20.png)
 ![dbt](imgs/Screenshot_2026-03-30_23-08-13.png)
-
+![looker](imgs/Screenshot_2026-04-14_21-15-53.png)
 ---
 
 ## 🛠️ Destaques Técnicos
@@ -35,8 +35,10 @@ Todo o ambiente de orquestração foi conteinerizado para garantir a idempotênc
 ### 3. Analytics Engineering com dbt
 Apliquei as melhores práticas de modelagem dentro do Snowflake para transformar dados brutos em ativos de negócio:
 * **Staging Layer:** Limpeza, renomeação técnica de colunas e normalização de tipos de dados.
-* **Analytics Layer:** Modelagem dimensional com criação de tabelas **Fato (Vendas)** e **Dimensões (Veículos, Clientes, Concessionárias)**.
+* **Analytics Layer:** Modelagem dimensional com criação de tabelas **Fato (Vendas)**, **Dimensões (Veículos, Clientes, Concessionárias)** e **Analysis (Vendas para análise)**.
 * **Data Quality:** Implementação de testes automatizados e documentação de linhagem (*lineage*).
+
+
 
 ---
 
@@ -72,6 +74,20 @@ dbt deps
 dbt run
 dbt test
 ```
+
+## 📊 Data Visualization & Business Insights
+
+A etapa final do projeto consistiu na criação de um dashboard executivo no **Looker Studio**, consumindo os dados modelados em Star Schema na camada de Marts do Snowflake. O objetivo é fornecer à diretoria da NovaDrive Motors uma visão clara da performance de vendas.
+
+### KPIs Monitorados:
+* **Faturamento Total:** Visão consolidada da receita gerada.
+* **Volume de Vendas por Concessionária:** Identificação das unidades com melhor performance.
+
+
+> **Diferencial Técnico:** O dashboard utiliza a modelagem feita via dbt, garantindo que as métricas sejam consistentes e que o processamento pesado (Joins e agregações) ocorra no Snowflake, resultando em uma interface de BI extremamente rápida.
+
+![looker](imgs/Screenshot_2026-04-14_21-15-53.png)
+
 ---
 
 ## 🎓 Créditos e Reconhecimento
@@ -85,5 +101,6 @@ O treinamento forneceu o cenário de negócio prático e as diretrizes arquitetu
 ## 👨‍💻 Autor
 
 **Danilo Natan**
-
-_Software Developer em transição para Engenharia de Dados._
+_Software Developer transicionando para Engenharia de Dados._
+* [LinkedIn](https://linkedin.com/in/danilo-natan-74a760243)
+* [GitHub](https://github.com/daniloNatan)
